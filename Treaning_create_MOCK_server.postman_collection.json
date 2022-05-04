@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "42c45f65-bd5b-4587-a16c-f783c6b1ef53",
+		"name": "Treaning create MOCK server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Tiny Validator JSON SHEMA Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody); // парсим респонс\r",
+							"\r",
+							"var schema = {\r",
+							"    // specify the type of object\r",
+							"    \"type\": \"object\",\r",
+							"    // specify requires properties\r",
+							"    \"required\": [\"people\", \"planets\", \"films\", \"species\", \"vehicles\", \"starships\"],\r",
+							"    // describe properties\r",
+							"    \"properties\": {\r",
+							"        \"people\": {\"type\": \"string\"},\r",
+							"        \"planets\": {\"type\": \"string\"},\r",
+							"        \"films\": {\"type\": \"string\"},\r",
+							"        \"species\": {\"type\": \"string\"},\r",
+							"        \"vehicles\": {\"type\": \"string\"},\r",
+							"        \"starships\": {\"type\": \"string\"},\r",
+							"    }\r",
+							"\r",
+							"};\r",
+							"pm.test(\"Body is correct\", function(){\r",
+							"    pm.expect(tv4.validate(data, schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "This MOCK Server",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://650e10f0-1b1f-4f8d-b7ce-d91f906db241.mock.pstmn.io",
+					"protocol": "https",
+					"host": [
+						"650e10f0-1b1f-4f8d-b7ce-d91f906db241",
+						"mock",
+						"pstmn",
+						"io"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "This MOCK Server",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://650e10f0-1b1f-4f8d-b7ce-d91f906db241.mock.pstmn.io",
+							"protocol": "https",
+							"host": [
+								"650e10f0-1b1f-4f8d-b7ce-d91f906db241",
+								"mock",
+								"pstmn",
+								"io"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\": {\r\n        \"name\": \"test\",\r\n        \"message\": \"success\"\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "This MOCK Server Copy Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "name",
+						"value": "sergei",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"sergei\"};"
+				},
+				"url": {
+					"raw": "https://650e10f0-1b1f-4f8d-b7ce-d91f906db241.mock.pstmn.io/action",
+					"protocol": "https",
+					"host": [
+						"650e10f0-1b1f-4f8d-b7ce-d91f906db241",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"action"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "This MOCK Server Copy Post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "name",
+								"value": "sergei",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"sergei\"};"
+						},
+						"url": {
+							"raw": "https://650e10f0-1b1f-4f8d-b7ce-d91f906db241.mock.pstmn.io/action",
+							"protocol": "https",
+							"host": [
+								"650e10f0-1b1f-4f8d-b7ce-d91f906db241",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"action"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"status\": {\n        \"name\": \"sergei\",\n        \"status\": \"created\",\n        \"message\": \"success\"\n    }\n}"
+				}
+			]
+		}
+	]
+}

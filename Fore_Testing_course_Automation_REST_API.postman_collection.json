@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "7a0313b9-6a87-4425-8286-2087bd55c15b",
+		"name": "Fore Testing, course Automation REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Tab APOD",
+			"item": [
+				{
+					"name": "Positive Case",
+					"item": [
+						{
+							"name": "GET Correction Date",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.nasa.gov/planetary/apod?api_key=idzWb9L1frkLbH5GaMvJsqtU21xL4hjYOyTCA4SF",
+									"protocol": "https",
+									"host": [
+										"api",
+										"nasa",
+										"gov"
+									],
+									"path": [
+										"planetary",
+										"apod"
+									],
+									"query": [
+										{
+											"key": "api_key",
+											"value": "idzWb9L1frkLbH5GaMvJsqtU21xL4hjYOyTCA4SF"
+										},
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET date between 1995 - 2022 years",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.nasa.gov/planetary/apod?api_key=idzWb9L1frkLbH5GaMvJsqtU21xL4hjYOyTCA4SF&date=1997-01-01",
+									"protocol": "https",
+									"host": [
+										"api",
+										"nasa",
+										"gov"
+									],
+									"path": [
+										"planetary",
+										"apod"
+									],
+									"query": [
+										{
+											"key": "api_key",
+											"value": "idzWb9L1frkLbH5GaMvJsqtU21xL4hjYOyTCA4SF"
+										},
+										{
+											"key": "date",
+											"value": "1997-01-01"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Negative Case",
+					"item": [
+						{
+							"name": "GET Date < 1995 years",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.nasa.gov/planetary/apod?api_key=idzWb9L1frkLbH5GaMvJsqtU21xL4hjYOyTCA4SF&date=1992-06-13",
+									"protocol": "https",
+									"host": [
+										"api",
+										"nasa",
+										"gov"
+									],
+									"path": [
+										"planetary",
+										"apod"
+									],
+									"query": [
+										{
+											"key": "api_key",
+											"value": "idzWb9L1frkLbH5GaMvJsqtU21xL4hjYOyTCA4SF"
+										},
+										{
+											"key": "date",
+											"value": "1992-06-13"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Date > 2022 years",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.nasa.gov/planetary/apod?api_key=idzWb9L1frkLbH5GaMvJsqtU21xL4hjYOyTCA4SF&date=2023-06-13",
+									"protocol": "https",
+									"host": [
+										"api",
+										"nasa",
+										"gov"
+									],
+									"path": [
+										"planetary",
+										"apod"
+									],
+									"query": [
+										{
+											"key": "api_key",
+											"value": "idzWb9L1frkLbH5GaMvJsqtU21xL4hjYOyTCA4SF"
+										},
+										{
+											"key": "date",
+											"value": "2023-06-13"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

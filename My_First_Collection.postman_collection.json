@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "7a824d70-1ba4-488e-91f2-7d1afe944e53",
+		"name": "My First Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Testing Tests Scripts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stackoverflow.com",
+					"protocol": "https",
+					"host": [
+						"stackoverflow",
+						"com"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJsZXNpa190ZXN0IiwiY2ZvSWQiOiLQptCS0JHQoSIsImlzcyI6InNlbGYiLCJhY3RpdmUiOnRydWUsImZ1bGxOYW1lIjoiTGVzaWtfVGVzdCBMZXNpa19UZXN0IiwiZGl2aXNpb24iOiLQntGC0LTQtdC7INC00LvRjyDRgtC10YHRgtC40YDQvtCy0LDQvdC40Y8g0KPQotCg0J4iLCJxdWFsaWZpY2F0aW9uIjoi0Y3QutGB0L_QtdGA0YIiLCJhY2NvdW50aW5nR3JvdXAiOiLQptCS0JHQoV_QntCj0J8iLCJ0elN5c3RlbSI6ItCj0KLQoNCeIiwic2NvcGUiOlsiQ00iLCJNQVNURVIiLCJBU1NJR05FRSIsIlBNIiwiT0kiXSwibmFtZSI6Imxlc2lrX3Rlc3QiLCJzdGFmZkNoYW5nZXNEYXRlIjoiMjAyMS0xMi0xM1QxNDoyOToxMCIsImNvbXBhbnkiOiLQmNC90YTQvtGB0LjRgdGC0LXQvNGLINCU0LbQtdGCIiwicG9zaXRpb24iOiLQktC10LTRg9GJ0LjQuSDQvNC10L3QtdC00LbQtdGAINC_0YDQvtC10LrRgtC-0LIiLCJleHAiOjE2NDQyMjE4MTMsImlhdCI6MTY0NDIyMDAxMywidXBkYXRlZCI6IjIwMjEtMTItMTdUMTg6MTI6NTUiLCJlbWFpbCI6Imxlc2lrX3Rlc3RAamV0LnN1In0.TBa1nOG718lOUGhX1scELBcsdYdsqw0PJ7lC6EjFOSG-cnl45isk10xpZu4wOx7S4t8ierf8-t8BxDzh89FT1TYLh4iGrWWZzcPAWqNJC4fdXXwTBlbeIz9Jdi7EtuyWhR9tNVR5LjT0s_sGef7Phq9enzF30L-ybodmvK7hkk6uB14fXW1mtFpqZ4wB_kjqdI4xAeSqNvDBBt6lW7XlLjnEGLvUQ6lRAup8FDfhXywrTnahsDpqYN1kLSTy7AqFFGzSRUb5IDQfvC6xTr9g-WFJyF27BlhSyUgU81uZ8fEmu2s60hEH0q7juePWLFlFwf2sLO0sNV1F-EWfYY8Orw",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
