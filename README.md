@@ -1,1 +1,1 @@
-Created as part of the course Automation REST API in Postman
+Collections created as part of the course REST API automation in Postman
